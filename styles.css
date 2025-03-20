@@ -287,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+/* Обновляем стили для navbar */
 .navbar {
     transition: all 0.3s ease;
     padding: 15px 0;
@@ -303,8 +304,26 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color) !important;
 }
 
-.navbar.scrolled .nav-link:hover {
-    color: var(--secondary-color) !important;
+/* Обновляем стили для мобильного меню */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(33, 37, 41, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+
+    .navbar.scrolled .navbar-collapse {
+        background-color: var(--primary-color);
+    }
+
+    .navbar.scrolled .nav-link {
+        color: white !important;
+    }
+
+    .navbar.scrolled .nav-link:hover {
+        color: var(--secondary-color) !important;
+    }
 }
 
 .navbar-brand {
@@ -500,15 +519,10 @@ button:focus,
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        margin-top: 15px;
-    }
-
-    .nav-link {
-        padding: 10px 0;
+        background-color: rgba(33, 37, 41, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
     }
 }
 
