@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей -->
+    <script>
+        document.querySelector('link[href="styles.css"]').href = 'styles.css?v=' + Date.now();
+    </script>
 </head>
 <body>
     <!-- Навигация -->
@@ -133,7 +136,7 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <p class="testimonial-text">Денис, спасибо за работу, за всегда конструктивный подход, за твое внимание к деталям, за редкую экспертность! И так приятно взаимодействовать!</p>
-                        <p class="testimonial-author">Ольга, Директор</п>
+                        <p class="testimonial-author">Ольга, Директор</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -151,7 +154,7 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <p class="testimonial-text">Денис, спасибо за помощь и за твою поддержку!</p>
-                        <p class="testimonial-author">Анна, Директор</п>
+                        <p class="testimonial-author">Анна, Директор</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -168,7 +171,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="testimonial-card">
-                        <p class="testimonial-text">Спасибо за помощь в решении сложных вопросов и за наставничество!</p>
+                        <p class="testimonial-text">Спасибо за помощь в решении сложных вопросов и за наставничество!</п>
                         <p class="testimonial-author">Алексей, Архитектор</p>
                     </div>
                 </div>
@@ -181,7 +184,7 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <p class="testimonial-text">Денис, спасибо за твой вклад в развитие архитектуры и за профессионализм!</p>
-                        <p class="testimonial-author">Антон, Руководитель центра компетенций</п>
+                        <p class="testimonial-author">Антон, Руководитель центра компетенций</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -193,97 +196,98 @@
                 <div class="col-md-4">
                     <div class="testimonial-card">
                         <p class="testimonial-text">Денис, спасибо за структурированность, системность и за отличные вопросы и ответы на наши встречи!</p>
-                        <p class="testimonial-author">Ольга, HR</п>
+                        <p class="testimonial-author">Ольга, HR</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<section id="contact" class="py-5 bg-white">
-    <div class="container">
-        <h2 class="section-title text-center">Свяжитесь со мной</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow-lg border-0 rounded-lg">
-                    <div class="card-body p-5">
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" style="height: 150px" placeholder="Ваше сообщение"></textarea>
-                            <label for="message">Ваше сообщение</label>
-                        </div>
-                        <div class="text-center">
-                            <button type="button" onclick="sendToTelegram()" class="btn btn-primary btn-lg rounded-pill px-5">
-                                <i class="bi bi-telegram me-2"></i>Отправить в Telegram
-                            </button>
+    <!-- Контакты -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-center">Свяжитесь со мной</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-lg">
+                        <div class="card-body p-5">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" style="height: 150px" placeholder="Ваше сообщение"></textarea>
+                                <label for="message">Ваше сообщение</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" onclick="sendToTelegram()" class="btn btn-primary btn-lg rounded-pill px-5">
+                                    <i class="bi bi-telegram me-2"></i>Отправить в Telegram
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row mt-5 g-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="bi bi-envelope-fill feature-icon"></i>
+                        <h3 class="h5">Email</h3>
+                        <p>matakov@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="bi bi-telephone-fill feature-icon"></i>
+                        <h3 class="h5">Телефон</h3>
+                        <p>+7 (906) 5550044</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="bi bi-telegram feature-icon"></i>
+                        <h3 class="h5">Telegram</h3>
+                        <p>@matakov</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row mt-5 g-4">
-            <div class="col-md-4 text-center">
-                <div class="feature-box">
-                    <i class="bi bi-envelope-fill feature-icon"></i>
-                    <h3 class="h5">Email</h3>
-                    <p>matakov@gmail.com</p>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="feature-box">
-                    <i class="bi bi-telephone-fill feature-icon"></i>
-                    <h3 class="h5">Телефон</h3>
-                    <p>+7 (906) 5550044</p>
-                </div>
-            </div>
-            <div class="col-md-4 text-center">
-                <div class="feature-box">
-                    <i class="bi bi-telegram feature-icon"></i>
-                    <h3 class="h5">Telegram</h3>
-                    <p>@matakov</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Футер -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <h3 class="h5 mb-4">Денис Матаков</h3>
-                <p>Ваш стратегический технологический партнер с 14+ летним опытом в IT-индустрии. Помогаю компаниям трансформировать бизнес с помощью экспертных технологических решений.</p>
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 mb-4">Денис Матаков</h3>
+                    <p>Ваш стратегический технологический партнер с 14+ летним опытом в IT-индустрии. Помогаю компаниям трансформировать бизнес с помощью экспертных технологических решений.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="h5 mb-4">Быстрые ссылки</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Услуги</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-white text-decoration-none">Отзывы</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 mb-4">Социальные сети</h3>
+                    <div class="d-flex">
+                        <a href="https://linkedin.com/in/matakov" class="social-icon me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/matacoder" class="social-icon me-2"><i class="bi bi-github"></i></a>
+                        <a href="https://t.me/matakov" class="social-icon"><i class="bi bi-telegram"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <h3 class="h5 mb-4">Быстрые ссылки</h3>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#services" class="text-white text-decoration-none">Услуги</a></li>
-                    <li class="mb-2"><a href="#testimonials" class="text-white text-decoration-none">Отзывы</a></li>
-                    <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4">
-                <h3 class="h5 mb-4">Социальные сети</h3>
-                <div class="d-flex">
-                    <a href="https://linkedin.com/in/matakov" class="social-icon me-2"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/matacoder" class="social-icon me-2"><i class="bi bi-github"></i></a>
-                    <a href="https://t.me/matakov" class="social-icon"><i class="bi bi-telegram"></i></a>
+            <hr class="my-4 bg-light opacity-25">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-muted mb-0">© 2025 Денис Матаков. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small text-muted mb-0">Разработано с <i class="bi bi-heart-fill text-danger"></i></p>
                 </div>
             </div>
         </div>
-        <hr class="my-4 bg-light opacity-25">
-        <div class="row">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="small text-muted mb-0">© 2025 Денис Матаков. Все права защищены.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <p class="small text-muted mb-0">Разработано с <i class="bi bi-heart-fill text-danger"></i></p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js.js"></script>
 </body>
 </html>
