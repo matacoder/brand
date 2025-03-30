@@ -87,6 +87,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
     color: var(--text-color);
     margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .service-card:hover {
@@ -492,4 +495,23 @@ button:hover, button:focus,
 .prototype-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для выделения болей клиентов */
+.pain-point {
+    font-weight: 600;
+    color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.pain-point::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--secondary-color), transparent);
 }
