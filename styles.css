@@ -414,3 +414,82 @@ button:hover, button:focus,
     color: var(--secondary-color);
     text-decoration: none;
 }
+
+/* Стили для секции прототипирования */
+.prototype-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.prototype-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(var(--secondary-color), var(--accent-color));
+    transition: all 0.5s ease;
+}
+
+.prototype-card:hover::before {
+    height: 100%;
+}
+
+.prototype-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+}
+
+.prototype-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.prototype-icon {
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(46, 204, 113, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.prototype-icon i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.prototype-card:hover .prototype-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.2));
+}
+
+.prototype-card:hover .prototype-icon i {
+    color: var(--accent-color);
+}
+
+.prototype-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
