@@ -11,478 +11,699 @@
     <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-    <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container">
-            <a class="navbar-brand text-white" href="#">Денис Матаков</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#services">Услуги</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#prototyping">Прототипирование</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#examples">Примеры</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#training">Обучение</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#testimonials">Отзывы</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Контакты</a></li>
-                </ul>
+    <!-- Общий контейнер навигации -->
+    <div class="nav-container">
+        <!-- Переключатель версий -->
+        <div class="version-switcher">
+            <div class="version-buttons">
+                <button class="version-btn active" data-version="business">
+                    <i class="bi bi-building"></i>
+                    Я представляю бизнес
+                </button>
+                <button class="version-btn" data-version="tech">
+                    <i class="bi bi-code-slash"></i>
+                    Я технический специалист
+                </button>
             </div>
         </div>
-    </nav>
 
-    <!-- Герой-секция -->
-    <section class="hero-section" id="home">
-        <div class="container hero-content">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-3">Ваш стратегический технологический партнер</h1>
-                    <p class="lead mb-4">Трансформируйте ваш бизнес с помощью экспертных технологических решений и 14+ лет опыта в IT-индустрии.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold">Связаться со мной</a>
-                        <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-bold">Узнать больше</a>
-                    </div>
-                </div>
-                <!-- Изображение или графика -->
-                <div class="col-lg-6 text-center">
-                    <div class="avatar-wrapper">
-                        <img src="avatar.png" alt="Денис Матаков" class="rounded-circle img-fluid">
-                    </div>
+        <!-- Навигация -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#prototyping">Прототипирование</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#examples">Примеры</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#training">Обучение</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Отзывы</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="services" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Мои услуги для вашего бизнеса</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-diagram-3 service-icon"></i>
-                        <h3>Стратегическое планирование</h3>
-                        <p><span class="pain-point">Устали от хаотичного развития IT без видимого результата?</span> Помогу создать четкую технологическую стратегию с измеримыми KPI и понятной дорожной картой.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-people service-icon"></i>
-                        <h3>Управление командами</h3>
-                        <p><span class="pain-point">Разработка движется медленно, а бюджеты растут?</span> Выстрою эффективные процессы, повышу продуктивность команд и сокращу time-to-market.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-gear service-icon"></i>
-                        <h3>Техническая архитектура</h3>
-                        <p><span class="pain-point">Системы не справляются с нагрузкой или стоимость поддержки зашкаливает?</span> Спроектирую масштабируемую архитектуру, снижающую операционные расходы.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-shield-lock service-icon"></i>
-                        <h3>Безопасность данных</h3>
-                        <p><span class="pain-point">Переживаете о потенциальных утечках данных и репутационных рисках?</span> Обеспечу защиту корпоративных данных и соответствие требованиям регуляторов.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-cloud service-icon"></i>
-                        <h3>Облачные решения</h3>
-                        <p><span class="pain-point">Беспокоят высокие расходы на инфраструктуру и её негибкость?</span> Оптимизирую облачные затраты до 40% и обеспечу масштабирование по требованию.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-graph-up service-icon"></i>
-                        <h3>Оптимизация процессов</h3>
-                        <p><span class="pain-point">Ручные операции отнимают время и ведут к ошибкам?</span> Автоматизирую критические бизнес-процессы, повышая скорость работы и исключая человеческий фактор.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-lightbulb service-icon"></i>
-                        <h3>Инновационные решения</h3>
-                        <p><span class="pain-point">Конкуренты внедряют передовые технологии, а вы отстаёте?</span> Помогу интегрировать AI, ML и другие современные технологии для получения конкурентного преимущества.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-bar-chart service-icon"></i>
-                        <h3>Аналитика и метрики</h3>
-                        <p><span class="pain-point">Принимаете решения вслепую, без опоры на данные?</span> Внедрю системы бизнес-аналитики, дающие полную прозрачность операций и основу для принятия решений.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="bi bi-clipboard-data service-icon"></i>
-                        <h3>Управление проектами</h3>
-                        <p><span class="pain-point">Проекты выходят за рамки сроков и бюджетов?</span> Внедрю методологии управления, обеспечивающие предсказуемую доставку результатов в срок и в рамках бюджета.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </nav>
+    </div>
 
-    <!-- Прототипирование -->
-    <section id="prototyping" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="section-title text-center">Быстрое прототипирование с AI</h2>
-            <p class="text-center mb-5">Создаю рабочие прототипы продуктов за неделю с помощью современных технологий и AI-инструментов</p>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-diagram-2"></i>
+    <!-- Версия для бизнеса -->
+    <div class="version-content" id="business-version">
+        <!-- Герой-секция -->
+        <section class="hero-section" id="home">
+            <div class="container hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="display-4 fw-bold mb-3">Ваш стратегический технологический партнер</h1>
+                        <p class="lead mb-4">Трансформируйте ваш бизнес с помощью экспертных технологических решений и 14+ лет опыта в IT-индустрии.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold">Связаться со мной</a>
+                            <a href="#services" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-bold">Узнать больше</a>
                         </div>
-                        <h3>Архитектура решения</h3>
-                        <p>Проектирую надежную и масштабируемую архитектуру с учетом особенностей вашего бизнеса и требований к производительности.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-database"></i>
+                    <!-- Изображение или графика -->
+                    <div class="col-lg-6 text-center">
+                        <div class="avatar-wrapper">
+                            <img src="avatar.png" alt="Денис Матаков" class="rounded-circle img-fluid">
                         </div>
-                        <h3>Проектирование базы данных</h3>
-                        <p>Создаю оптимальную структуру данных в PostgreSQL с правильными связями, индексами и настройками для высокой производительности.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <h3>Разработка API</h3>
-                        <p>Проектирую и имплементирую REST или GraphQL API с четкой документацией, обработкой ошибок и тестированием.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-robot"></i>
-                        </div>
-                        <h3>AI-ассистированный код</h3>
-                        <p>Использую современные AI-инструменты для генерации чистого, хорошо структурированного и тестируемого кода на Python, JavaScript и SQL.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h3>Полнофункциональный прототип</h3>
-                        <p>Создаю не просто макет, а работающее приложение с реальными функциями, которое можно показать инвесторам или протестировать с пользователями.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="prototype-card">
-                        <div class="prototype-icon">
-                            <i class="bi bi-clock-history"></i>
-                        </div>
-                        <h3>Быстрая итерация</h3>
-                        <p>Получайте первые результаты уже через неделю и быстро адаптируйте продукт на основе обратной связи, экономя время и ресурсы.</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Обсудить ваш проект</a>
+        </section>
+        <section id="services" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Мои услуги для вашего бизнеса</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-diagram-3 service-icon"></i>
+                            <h3>Стратегическое планирование</h3>
+                            <p><span class="pain-point">Устали от хаотичного развития IT без видимого результата?</span> Помогу создать четкую технологическую стратегию с измеримыми KPI и понятной дорожной картой.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-people service-icon"></i>
+                            <h3>Управление командами</h3>
+                            <p><span class="pain-point">Разработка движется медленно, а бюджеты растут?</span> Выстрою эффективные процессы, повышу продуктивность команд и сокращу time-to-market.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-gear service-icon"></i>
+                            <h3>Техническая архитектура</h3>
+                            <p><span class="pain-point">Системы не справляются с нагрузкой или стоимость поддержки зашкаливает?</span> Спроектирую масштабируемую архитектуру, снижающую операционные расходы.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-shield-lock service-icon"></i>
+                            <h3>Безопасность данных</h3>
+                            <p><span class="pain-point">Переживаете о потенциальных утечках данных и репутационных рисках?</span> Обеспечу защиту корпоративных данных и соответствие требованиям регуляторов.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-cloud service-icon"></i>
+                            <h3>Облачные решения</h3>
+                            <p><span class="pain-point">Беспокоят высокие расходы на инфраструктуру и её негибкость?</span> Оптимизирую облачные затраты до 40% и обеспечу масштабирование по требованию.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-graph-up service-icon"></i>
+                            <h3>Оптимизация процессов</h3>
+                            <p><span class="pain-point">Ручные операции отнимают время и ведут к ошибкам?</span> Автоматизирую критические бизнес-процессы, повышая скорость работы и исключая человеческий фактор.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-lightbulb service-icon"></i>
+                            <h3>Инновационные решения</h3>
+                            <p><span class="pain-point">Конкуренты внедряют передовые технологии, а вы отстаёте?</span> Помогу интегрировать AI, ML и другие современные технологии для получения конкурентного преимущества.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-bar-chart service-icon"></i>
+                            <h3>Аналитика и метрики</h3>
+                            <p><span class="pain-point">Принимаете решения вслепую, без опоры на данные?</span> Внедрю системы бизнес-аналитики, дающие полную прозрачность операций и основу для принятия решений.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-clipboard-data service-icon"></i>
+                            <h3>Управление проектами</h3>
+                            <p><span class="pain-point">Проекты выходят за рамки сроков и бюджетов?</span> Внедрю методологии управления, обеспечивающие предсказуемую доставку результатов в срок и в рамках бюджета.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Примеры прототипов -->
-    <section id="examples" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Примеры созданных прототипов</h2>
-            <p class="text-center mb-5">Реальные рабочие продукты, разработанные в короткие сроки с использованием AI и современных технологий</p>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="example-card">
-                        <div class="example-img-wrapper">
-                            <div class="emoji-placeholder">🌐</div>
-                            <div class="example-time-badge">2 дня</div>
-                        </div>
-                        <div class="example-content">
-                            <h3>Персональный лендинг</h3>
-                            <p>Адаптивный, современный сайт-визитка с оптимизированной структурой и быстрой загрузкой. Полностью настраиваемый дизайн на Bootstrap 5.</p>
-                            <div class="tech-stack">
-                                <span class="tech-badge">HTML5</span>
-                                <span class="tech-badge">CSS3</span>
-                                <span class="tech-badge">JavaScript</span>
-                                <span class="tech-badge">Bootstrap 5</span>
+        <!-- Прототипирование -->
+        <section id="prototyping" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title text-center">Быстрое прототипирование с AI</h2>
+                <p class="text-center mb-5">Создаю рабочие прототипы продуктов за неделю с помощью современных технологий и AI-инструментов</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-diagram-2"></i>
                             </div>
-                            <a href="https://mtkv.ru/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
+                            <h3>Архитектура решения</h3>
+                            <p>Проектирую надежную и масштабируемую архитектуру с учетом особенностей вашего бизнеса и требований к производительности.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-database"></i>
+                            </div>
+                            <h3>Проектирование базы данных</h3>
+                            <p>Создаю оптимальную структуру данных в PostgreSQL с правильными связями, индексами и настройками для высокой производительности.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                            <h3>Разработка API</h3>
+                            <p>Проектирую и имплементирую REST или GraphQL API с четкой документацией, обработкой ошибок и тестированием.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                            <h3>AI-ассистированный код</h3>
+                            <p>Использую современные AI-инструменты для генерации чистого, хорошо структурированного и тестируемого кода на Python, JavaScript и SQL.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3>Полнофункциональный прототип</h3>
+                            <p>Создаю не просто макет, а работающее приложение с реальными функциями, которое можно показать инвесторам или протестировать с пользователями.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="prototype-card">
+                            <div class="prototype-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h3>Быстрая итерация</h3>
+                            <p>Получайте первые результаты уже через неделю и быстро адаптируйте продукт на основе обратной связи, экономя время и ресурсы.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="example-card">
-                        <div class="example-img-wrapper">
-                            <div class="emoji-placeholder">📈</div>
-                            <div class="example-time-badge">4 дня</div>
-                        </div>
-                        <div class="example-content">
-                            <h3>Система управления перформанс-ревью</h3>
-                            <p>Полнофункциональное веб-приложение для проведения объективных перформанс-ревью в IT-компаниях с управлением командами и сбором обратной связи.</p>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Django</span>
-                                <span class="tech-badge">HTMX</span>
-                                <span class="tech-badge">PostgreSQL</span>
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Обсудить ваш проект</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Примеры прототипов -->
+        <section id="examples" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Примеры созданных прототипов</h2>
+                <p class="text-center mb-5">Реальные рабочие продукты, разработанные в короткие сроки с использованием AI и современных технологий</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="example-card">
+                            <div class="example-img-wrapper">
+                                <div class="emoji-placeholder">🌐</div>
+                                <div class="example-time-badge">2 дня</div>
                             </div>
-                            <a href="https://perf.mtkv.ru/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
+                            <div class="example-content">
+                                <h3>Персональный лендинг</h3>
+                                <p>Адаптивный, современный сайт-визитка с оптимизированной структурой и быстрой загрузкой. Полностью настраиваемый дизайн на Bootstrap 5.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Bootstrap 5</span>
+                                </div>
+                                <a href="https://mtkv.ru/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="example-card">
+                            <div class="example-img-wrapper">
+                                <div class="emoji-placeholder">📈</div>
+                                <div class="example-time-badge">4 дня</div>
+                            </div>
+                            <div class="example-content">
+                                <h3>Система управления перформанс-ревью</h3>
+                                <p>Полнофункциональное веб-приложение для проведения объективных перформанс-ревью в IT-компаниях с управлением командами и сбором обратной связи.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Django</span>
+                                    <span class="tech-badge">HTMX</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                                <a href="https://perf.mtkv.ru/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="example-card">
+                            <div class="example-img-wrapper">
+                                <div class="emoji-placeholder">📚</div>
+                                <div class="example-time-badge">1 день</div>
+                            </div>
+                            <div class="example-content">
+                                <h3>Платформа документации</h3>
+                                <p>Система для визуализации и навигации по технической документации в формате Markdown с автоматической конвертацией и поддержкой синтаксиса кода.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">Markdown</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                                <a href="https://matakov.com/python/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="example-card">
-                        <div class="example-img-wrapper">
-                            <div class="emoji-placeholder">📚</div>
-                            <div class="example-time-badge">1 день</div>
-                        </div>
-                        <div class="example-content">
-                            <h3>Платформа документации</h3>
-                            <p>Система для визуализации и навигации по технической документации в формате Markdown с автоматической конвертацией и поддержкой синтаксиса кода.</p>
-                            <div class="tech-stack">
-                                <span class="tech-badge">PHP</span>
-                                <span class="tech-badge">Markdown</span>
-                                <span class="tech-badge">JavaScript</span>
-                            </div>
-                            <a href="https://matakov.com/python/" target="_blank" class="btn btn-sm btn-outline-primary mt-3"><i class="bi bi-play-fill"></i>Посмотреть демо</a>
-                        </div>
-                    </div>
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Заказать разработку прототипа</a>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Заказать разработку прототипа</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Обучение и развитие персонала -->
-    <section id="training" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="section-title text-center">Обучение и развитие персонала</h2>
-            <p class="text-center mb-5">Комплексные решения для развития технических команд и повышения качества разработки</p>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-diagram-3"></i>
+        <!-- Обучение и развитие персонала -->
+        <section id="training" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title text-center">Обучение и развитие персонала</h2>
+                <p class="text-center mb-5">Комплексные решения для развития технических команд и повышения качества разработки</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+                            <h3>Центры компетенций</h3>
+                            <p>Создам и запущу центры компетенций по бэкенд и фронтенд разработке. Внедрю систему оценки навыков, менторинг и обмен опытом между командами.</p>
                         </div>
-                        <h3>Центры компетенций</h3>
-                        <p>Создам и запущу центры компетенций по бэкенд и фронтенд разработке. Внедрю систему оценки навыков, менторинг и обмен опытом между командами.</p>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-check-circle"></i>
+                            </div>
+                            <h3>Приемочное тестирование</h3>
+                            <p>Организую процесс приемочного тестирования, повышу покрытие кода тестами до 80%+. Внедрю автоматизированное тестирование и CI/CD практики.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-person-workspace"></i>
+                            </div>
+                            <h3>Развитие топ-разработчиков</h3>
+                            <p>Разработаю индивидуальные планы развития для ведущих разработчиков и архитекторов. Включу технические и soft skills, карьерное планирование.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <h3>Корпоративная архитектура</h3>
+                            <p>Запущу процесс внедрения фреймворка TOGAF 10 с адаптацией под специфику вашей компании. Создам архитектурные принципы и стандарты.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h3>Перформанс-ревью</h3>
+                            <p>Подготовлю и запущу систему перформанс-ревью для технического персонала. Внедрю объективные метрики оценки и систему обратной связи.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="training-card">
+                            <div class="training-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h3>Аудит архитектуры</h3>
+                            <p>Проведу комплексный аудит корпоративной архитектуры. Предоставлю рекомендации по оптимизации, снижению рисков и повышению эффективности.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-check-circle"></i>
-                        </div>
-                        <h3>Приемочное тестирование</h3>
-                        <p>Организую процесс приемочного тестирования, повышу покрытие кода тестами до 80%+. Внедрю автоматизированное тестирование и CI/CD практики.</p>
-                    </div>
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Обсудить развитие команды</a>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-person-workspace"></i>
-                        </div>
-                        <h3>Развитие топ-разработчиков</h3>
-                        <p>Разработаю индивидуальные планы развития для ведущих разработчиков и архитекторов. Включу технические и soft skills, карьерное планирование.</p>
-                    </div>
-                </div>
+            </div>
+        </section>
 
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-building"></i>
+        <!-- Отзывы -->
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Отзывы коллег и клиентов</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо тебе большое! ❤️</p>
+                            <p class="testimonial-author">Антон, Генеральный директор</p>
                         </div>
-                        <h3>Корпоративная архитектура</h3>
-                        <p>Запущу процесс внедрения фреймворка TOGAF 10 с адаптацией под специфику вашей компании. Создам архитектурные принципы и стандарты.</p>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-graph-up"></i>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за работу, за всегда конструктивный подход, за твое внимание к деталям, за редкую экспертность! И так приятно взаимодействовать!</p>
+                            <p class="testimonial-author">Ольга, Директор</p>
                         </div>
-                        <h3>Перформанс-ревью</h3>
-                        <p>Подготовлю и запущу систему перформанс-ревью для технического персонала. Внедрю объективные метрики оценки и систему обратной связи.</p>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="training-card">
-                        <div class="training-icon">
-                            <i class="bi bi-shield-check"></i>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за участие и возможность помочь в адаптации. За твои честные, беспристрастные и "жесткие" (но справедливые) подходы, за открытость и душевность на рабочих встречах!</p>
+                            <p class="testimonial-author">Мария, Product Manager</p>
                         </div>
-                        <h3>Аудит архитектуры</h3>
-                        <p>Проведу комплексный аудит корпоративной архитектуры. Предоставлю рекомендации по оптимизации, снижению рисков и повышению эффективности.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Спасибо за поддержку, настойчивость и решительность!</p>
+                            <p class="testimonial-author">Игорь, Директор</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за помощь и за твою поддержку!</p>
+                            <p class="testimonial-author">Анна, Директор</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за участие в адаптации и за искреннюю помощь в решении вопросов! Ты крутой!</p>
+                            <p class="testimonial-author">Дмитрий, Product Manager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Спасибо за отзывчивость и готовность ответить!</p>
+                            <p class="testimonial-author">Алексей, CTO</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Спасибо за помощь в решении сложных вопросов и за наставничество!</p>
+                            <p class="testimonial-author">Алексей, Архитектор</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за взаимодействие с тобой и твоей командой в 2024-м! У нас многое стало замечательнее в 2025!</p>
+                            <p class="testimonial-author">Светлана, HR</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за твой вклад в развитие архитектуры и за профессионализм!</p>
+                            <p class="testimonial-author">Антон, Руководитель центра компетенций</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Спасибо за помощь и за твои советы! Ты супер :)</p>
+                            <p class="testimonial-author">Валентин, Архитектор</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">Денис, спасибо за структурированность, системность и за отличные вопросы и ответы на наши встречи!</p>
+                            <p class="testimonial-author">Ольга, HR</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">Обсудить развитие команды</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Отзывы -->
-    <section id="testimonials" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center">Отзывы коллег и клиентов</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо тебе большое! ❤️</p>
-                        <p class="testimonial-author">Антон, Генеральный директор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за работу, за всегда конструктивный подход, за твое внимание к деталям, за редкую экспертность! И так приятно взаимодействовать!</p>
-                        <p class="testimonial-author">Ольга, Директор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за участие и возможность помочь в адаптации. За твои честные, беспристрастные и "жесткие" (но справедливые) подходы, за открытость и душевность на рабочих встречах!</p>
-                        <p class="testimonial-author">Мария, Product Manager</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Спасибо за поддержку, настойчивость и решительность!</p>
-                        <p class="testimonial-author">Игорь, Директор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за помощь и за твою поддержку!</p>
-                        <p class="testimonial-author">Анна, Директор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за участие в адаптации и за искреннюю помощь в решении вопросов! Ты крутой!</p>
-                        <p class="testimonial-author">Дмитрий, Product Manager</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Спасибо за отзывчивость и готовность ответить!</p>
-                        <p class="testimonial-author">Алексей, CTO</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Спасибо за помощь в решении сложных вопросов и за наставничество!</p>
-                        <p class="testimonial-author">Алексей, Архитектор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за взаимодействие с тобой и твоей командой в 2024-м! У нас многое стало замечательнее в 2025!</p>
-                        <p class="testimonial-author">Светлана, HR</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за твой вклад в развитие архитектуры и за профессионализм!</p>
-                        <p class="testimonial-author">Антон, Руководитель центра компетенций</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Спасибо за помощь и за твои советы! Ты супер :)</p>
-                        <p class="testimonial-author">Валентин, Архитектор</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">Денис, спасибо за структурированность, системность и за отличные вопросы и ответы на наши встречи!</p>
-                        <p class="testimonial-author">Ольга, HR</p>
+        <!-- Баннер LinkedIn -->
+        <section class="py-4 bg-light">
+            <div class="container">
+                <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white;">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="mb-3 text-white">Вы можете проверить отзывы на странице рекомендаций LinkedIn*</h3>
+                        <a href="https://www.linkedin.com/in/matakov/details/recommendations/?detailScreenTabIndex=0" 
+                           target="_blank" 
+                           class="btn btn-light btn-lg rounded-pill px-4 py-2">
+                            <i class="bi bi-linkedin me-2"></i>
+                            Перейти в рекомендации
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Баннер LinkedIn -->
-    <section class="py-4 bg-light">
-        <div class="container">
-            <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #2c3e50, #3498db); color: white;">
-                <div class="card-body p-4 text-center">
-                    <h3 class="mb-3 text-white">Вы можете проверить отзывы на странице рекомендаций LinkedIn*</h3>
-                    <a href="https://www.linkedin.com/in/matakov/details/recommendations/?detailScreenTabIndex=0" 
-                       target="_blank" 
-                       class="btn btn-light btn-lg rounded-pill px-4 py-2">
-                        <i class="bi bi-linkedin me-2"></i>
-                        Перейти в рекомендации
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="section-title text-center">Свяжитесь со мной</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card shadow-lg border-0 rounded-lg">
-                        <div class="card-body p-5">
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" style="height: 150px" placeholder="Ваше сообщение"></textarea>
-                                <label for="message">Ваше сообщение</label>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" onclick="sendToTelegram()" class="btn btn-primary btn-lg rounded-pill px-5">
-                                    <i class="bi bi-telegram me-2"></i>Отправить в Telegram
-                                </button>
+        <!-- Контакты -->
+        <section id="contact" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title text-center">Свяжитесь со мной</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-lg border-0 rounded-lg">
+                            <div class="card-body p-5">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" style="height: 150px" placeholder="Ваше сообщение"></textarea>
+                                    <label for="message">Ваше сообщение</label>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" onclick="sendToTelegram()" class="btn btn-primary btn-lg rounded-pill px-5">
+                                        <i class="bi bi-telegram me-2"></i>Отправить в Telegram
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row mt-5 g-4">
+                    <div class="col-md-4 text-center">
+                        <div class="feature-box">
+                            <i class="bi bi-envelope-fill feature-icon"></i>
+                            <h3 class="h5">Email</h3>
+                            <p><a href="mailto:matakov@gmail.com" target="_blank" class="text-primary text-decoration-none">matakov@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="feature-box">
+                            <i class="bi bi-telephone-fill feature-icon"></i>
+                            <h3 class="h5">Телефон</h3>
+                            <p><a href="https://t.me/matakov" target="_blank" class="text-primary text-decoration-none">+7 (906) 5550044</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="feature-box">
+                            <i class="bi bi-telegram feature-icon"></i>
+                            <h3 class="h5">Telegram</h3>
+                            <p><a href="https://t.me/matakov" target="_blank" class="text-primary text-decoration-none">@matakov</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row mt-5 g-4">
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <i class="bi bi-envelope-fill feature-icon"></i>
-                        <h3 class="h5">Email</h3>
-                        <p><a href="mailto:matakov@gmail.com" target="_blank" class="text-primary text-decoration-none">matakov@gmail.com</a></p>
+        </section>
+    </div>
+
+    <!-- Версия для технических специалистов -->
+    <div class="version-content d-none" id="tech-version">
+        <!-- Герой-секция для технарей -->
+        <section class="hero-section" id="tech-home">
+            <div class="container hero-content">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="display-4 fw-bold mb-3">Ваш карьерный наставник в IT</h1>
+                        <p class="lead mb-4">Помогу построить успешную карьеру в технологиях, развить нужные навыки и достичь новых высот в профессии.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#tech-contact" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold">Записаться на консультацию</a>
+                            <a href="#tech-path" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-bold">Узнать больше</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <i class="bi bi-telephone-fill feature-icon"></i>
-                        <h3 class="h5">Телефон</h3>
-                        <p><a href="https://t.me/matakov" target="_blank" class="text-primary text-decoration-none">+7 (906) 5550044</a></p>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="feature-box">
-                        <i class="bi bi-telegram feature-icon"></i>
-                        <h3 class="h5">Telegram</h3>
-                        <p><a href="https://t.me/matakov" target="_blank" class="text-primary text-decoration-none">@matakov</a></p>
+                    <div class="col-lg-6 text-center">
+                        <div class="avatar-wrapper">
+                            <img src="avatar.png" alt="Денис Матаков" class="rounded-circle img-fluid">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Услуги для технарей -->
+        <section id="tech-services" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Услуги для развития карьеры</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-person-workspace service-icon"></i>
+                            <h3>Карьерное консультирование</h3>
+                            <p>Разработаю индивидуальный план развития карьеры с учетом ваших целей, опыта и рыночных трендов.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-code-square service-icon"></i>
+                            <h3>Технический менторинг</h3>
+                            <p>Помогу освоить новые технологии, улучшить архитектурные навыки и повысить качество кода.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-chat-dots service-icon"></i>
+                            <h3>Soft Skills</h3>
+                            <p>Развитие навыков коммуникации, презентации и управления проектами для роста в профессии.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-file-earmark-text service-icon"></i>
+                            <h3>Подготовка резюме</h3>
+                            <p>Помогу создать эффективное резюме и подготовиться к техническим собеседованиям.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-graph-up service-icon"></i>
+                            <h3>Переговоры по зарплате</h3>
+                            <p>Научу эффективно вести переговоры о повышении зарплаты и новых условиях работы.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <i class="bi bi-people service-icon"></i>
+                            <h3>Нетворкинг</h3>
+                            <p>Помогу построить профессиональную сеть контактов и найти интересные проекты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карьерный путь -->
+        <section id="tech-path" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title text-center">Карьерные пути в IT</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="career-path-card">
+                            <h3>Backend Developer → Senior → Architect</h3>
+                            <ul class="career-path-list">
+                                <li>Освоение современных фреймворков</li>
+                                <li>Проектирование масштабируемых систем</li>
+                                <li>Управление техническим долгом</li>
+                                <li>Работа с микросервисами</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="career-path-card">
+                            <h3>Frontend Developer → Senior → Tech Lead</h3>
+                            <ul class="career-path-list">
+                                <li>Современные фреймворки и библиотеки</li>
+                                <li>Оптимизация производительности</li>
+                                <li>Управление командой разработки</li>
+                                <li>Архитектура клиентских приложений</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section id="tech-skills" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Ключевые навыки для роста</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="skill-card">
+                            <i class="bi bi-code-slash skill-icon"></i>
+                            <h3>Технические навыки</h3>
+                            <ul class="skill-list">
+                                <li>Современные языки программирования</li>
+                                <li>Архитектурные паттерны</li>
+                                <li>Тестирование и качество кода</li>
+                                <li>DevOps практики</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-card">
+                            <i class="bi bi-people skill-icon"></i>
+                            <h3>Soft Skills</h3>
+                            <ul class="skill-list">
+                                <li>Коммуникация и презентация</li>
+                                <li>Управление проектами</li>
+                                <li>Работа в команде</li>
+                                <li>Решение конфликтов</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="skill-card">
+                            <i class="bi bi-lightbulb skill-icon"></i>
+                            <h3>Бизнес-навыки</h3>
+                            <ul class="skill-list">
+                                <li>Управление ресурсами</li>
+                                <li>Принятие решений</li>
+                                <li>Стратегическое мышление</li>
+                                <li>Управление рисками</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы технарей -->
+        <section id="tech-testimonials" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="section-title text-center">Отзывы от технических специалистов</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Благодаря консультациям с Денисом я смог перейти на позицию Senior Developer и увеличил зарплату на 40%."</p>
+                            <p class="testimonial-author">Алексей, Senior Backend Developer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Получил ценную обратную связь по своему коду и архитектурным решениям. Теперь пишу более чистый и масштабируемый код."</p>
+                            <p class="testimonial-author">Дмитрий, Backend Developer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Помог подготовиться к техническому собеседованию и успешно перейти в топовую компанию."</p>
+                            <p class="testimonial-author">Елена, Frontend Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Контакты для технарей -->
+        <section id="tech-contact" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Записаться на консультацию</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-lg border-0 rounded-lg">
+                            <div class="card-body p-5">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="tech-message" style="height: 150px" placeholder="Ваше сообщение"></textarea>
+                                    <label for="tech-message">Расскажите о ваших карьерных целях</label>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" onclick="sendToTelegram()" class="btn btn-primary btn-lg rounded-pill px-5">
+                                        <i class="bi bi-telegram me-2"></i>Отправить в Telegram
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Футер -->
     <footer class="footer">
