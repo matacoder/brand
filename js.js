@@ -1,23 +1,66 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Плавная прокрутка при клике на навигационные ссылки
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    // Навигация при скролле
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileMenu = document.querySelector('.navbar-collapse');
+    const bsCollapse = new bootstrap.Collapse(mobileMenu, {toggle: false});
+
+    // Закрытие меню при клике вне его области
+    document.addEventListener('click', function(event) {
+        const isClickInside = mobileMenu.contains(event.target) || 
+                            event.target.closest('.navbar-toggler');
+        
+        if (!isClickInside && mobileMenu.classList.contains('show')) {
+            bsCollapse.hide();
+        }
     });
 
-    // Изменение навбара при прокрутке
+    // Закрытие меню при прокрутке
+    let lastScrollTop = 0;
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
+        if (mobileMenu.classList.contains('show')) {
+            bsCollapse.hide();
+        }
+        lastScrollTop = window.pageYOffset;
+    });
+
+    // Изменение навбара при скролле
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
     });
+
+    // Плавная прокрутка к секциям
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                // Закрываем мобильное меню при клике на ссылку
+                if (mobileMenu.classList.contains('show')) {
+                    bsCollapse.hide();
+                }
+                
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Отправка сообщения в Telegram
+    window.sendToTelegram = function() {
+        const message = document.getElementById('message').value;
+        const telegramUsername = 'matakov';
+        const telegramUrl = `https://t.me/${telegramUsername}?text=${encodeURIComponent(message)}`;
+        window.open(telegramUrl, '_blank');
+    };
 
     // Анимация появления элементов при скролле
     const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -113,9 +156,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
-function sendToTelegram() {
-    const message = document.getElementById('message').value;
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://t.me/matakov?text=${encodedMessage}`, '_blank');
-}
