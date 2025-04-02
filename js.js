@@ -1,9 +1,83 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Навигация при скролле
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Переключение версий сайта
+    const versionButtons = document.querySelectorAll('.version-btn');
+    const businessVersion = document.getElementById('business-version');
+    const techVersion = document.getElementById('tech-version');
+    const navbarMenu = document.querySelector('.navbar-collapse ul');
+    const mainNavbar = document.querySelector('.navbar');
     const mobileMenu = document.querySelector('.navbar-collapse');
     const bsCollapse = new bootstrap.Collapse(mobileMenu, {toggle: false});
+
+    // Меню для разных версий
+    const businessMenu = `
+        <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+        <li class="nav-item"><a class="nav-link" href="#prototyping">Прототипирование</a></li>
+        <li class="nav-item"><a class="nav-link" href="#examples">Примеры</a></li>
+        <li class="nav-item"><a class="nav-link" href="#training">Обучение</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Отзывы</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+    `;
+
+    const techMenu = `
+        <li class="nav-item"><a class="nav-link" href="#tech-services">Услуги</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech-path">Карьерный путь</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech-skills">Навыки</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech-testimonials">Отзывы</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tech-contact">Контакты</a></li>
+    `;
+
+    // Функция для обновления URL с якорем
+    function updateUrlWithAnchor(version) {
+        const url = new URL(window.location.href);
+        url.hash = version;
+        window.history.pushState({}, '', url);
+    }
+
+    // Функция для переключения версии
+    function switchVersion(version) {
+        // Обновляем активную кнопку
+        versionButtons.forEach(btn => btn.classList.remove('active'));
+        const activeButton = document.querySelector(`[data-version="${version}"]`);
+        activeButton.classList.add('active');
+        
+        // Переключаем контент
+        if (version === 'business') {
+            businessVersion.classList.remove('d-none');
+            techVersion.classList.add('d-none');
+            navbarMenu.innerHTML = businessMenu;
+        } else {
+            businessVersion.classList.add('d-none');
+            techVersion.classList.remove('d-none');
+            navbarMenu.innerHTML = techMenu;
+        }
+        
+        // Закрываем мобильное меню при переключении
+        if (mobileMenu.classList.contains('show')) {
+            bsCollapse.hide();
+        }
+
+        // Обновляем стили навбара
+        if (window.pageYOffset > 50) {
+            mainNavbar.classList.add('scrolled');
+        } else {
+            mainNavbar.classList.remove('scrolled');
+        }
+    }
+
+    // Обработчик клика по кнопкам переключения
+    versionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const version = this.dataset.version;
+            switchVersion(version);
+            updateUrlWithAnchor(version);
+        });
+    });
+
+    // Проверяем якорь при загрузке страницы
+    const hash = window.location.hash.slice(1);
+    if (hash === 'business' || hash === 'tech') {
+        switchVersion(hash);
+    }
 
     // Закрытие меню при клике вне его области
     document.addEventListener('click', function(event) {
@@ -24,16 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = window.pageYOffset;
     });
 
-    // Изменение навбара при скролле
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
     // Плавная прокрутка к секциям
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
