@@ -321,19 +321,50 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+/* Стили для мобильной версии */
 @media (max-width: 991.98px) {
+    .nav-container {
+        padding: 0.5rem 0 0 0;
+    }
+
+    .version-buttons {
+        padding-left: 0.5rem;
+    }
+
+    .version-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .version-btn i {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+    .navbar {
+        margin-right: 0.5rem;
+    }
+
     .navbar-collapse {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
         background-color: white;
         padding: 1rem;
         border-radius: 8px;
-        margin-top: 0.5rem;
+        margin: 0.5rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .navbar .nav-link {
         color: var(--primary-color);
         padding: 0.75rem 1rem;
         margin: 0.25rem 0;
+        border-radius: 4px;
+        display: block;
     }
 
     .navbar .nav-link:hover {
@@ -344,6 +375,16 @@ h1, h2, h3, h4, h5, h6 {
     .navbar .nav-link.active {
         color: var(--secondary-color);
         background: rgba(52, 152, 219, 0.1);
+    }
+
+    .navbar-toggler {
+        padding: 0.5rem;
+        border: none;
+        outline: none !important;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
     }
 }
 
